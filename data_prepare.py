@@ -67,6 +67,7 @@ excel_file = pd.ExcelFile(file_path)
 # Summary sheet'inden suç türlerini al
 summary_sheet = pd.read_excel(file_path, sheet_name="Summary", header=None)
 crime_types = summary_sheet.iloc[15:57, 3].dropna().tolist()
+print(crime_types)
 
 # Her bir sheet'i işle ve ayrı CSV dosyalarına kaydet
 sheet_index = 0
